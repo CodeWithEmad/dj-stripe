@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 
 class StripeBaseModel(models.Model):
-    stripe_class: Optional[APIResource] = None
+    stripe_class: APIResource
 
     djstripe_created = models.DateTimeField(auto_now_add=True, editable=False)
     djstripe_updated = models.DateTimeField(auto_now=True, editable=False)
